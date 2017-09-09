@@ -29,6 +29,11 @@ public class DisplayActivity extends AppCompatActivity {
         mPlayButton.setOnClickListener(view -> startReading());
         mStopButton.setOnClickListener(view -> stopReading());
         mWordView = (WordView)findViewById(R.id.wordView);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
         // create reader based on preferences
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         String textToRead = sharedPref.getString(UserSettingsActivity.PREFERENCE_TEXT_KEY, "-");

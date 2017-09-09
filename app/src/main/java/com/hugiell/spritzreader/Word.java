@@ -1,9 +1,5 @@
 package com.hugiell.spritzreader;
 
-/**
- * Represents word
- */
-
 public class Word {
     private String word;
 

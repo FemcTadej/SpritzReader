@@ -5,9 +5,6 @@ import io.reactivex.*;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
-/**
- * Created by Hugiell on 1. 09. 2017.
- */
 public class Reader {
     private static final Reader ourInstance = new Reader();
     private String mText;
