@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/imageView_centerIndicator"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
+        android:layout_width="260dp"
+        android:layout_height="130dp"
         android:layout_marginBottom="200dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -30,7 +30,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="16dp"
         android:background="@null"
         android:scaleType="fitCenter"
         app:layout_constraintLeft_toLeftOf="parent"

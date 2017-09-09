@@ -17,8 +17,8 @@ public class WordView extends View {
     public static final float TEXT_SIZE = 120;
     private TextPaint mTextPaint = new TextPaint();
     private StaticLayout mLayout;
-    private int mXPos;
-    private int mYPos;
+    private int canvasCenterHoriz;
+    private int canvasCenterVert;
     private String mWord = "";
     private int mCenterCharacterIndex = 0;
 
@@ -30,8 +30,8 @@ public class WordView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        mXPos = canvas.getWidth()/2;
-        mYPos = canvas.getHeight()/2;
+        canvasCenterHoriz = canvas.getWidth()/2;
+        canvasCenterVert = canvas.getHeight()/2;
         Spannable wordSpannable = new SpannableString(mWord);
         if(mWord.length() > 0) {
             wordSpannable.setSpan(new ForegroundColorSpan(Color.RED), mCenterCharacterIndex, mCenterCharacterIndex+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -42,7 +42,7 @@ public class WordView extends View {
             float bias = leadingTextWidth - trailingTextWidth;
             mLayout = new StaticLayout(wordSpannable, mTextPaint, getWidth(), Layout.Alignment.ALIGN_CENTER, 1, 0, false);
             // shift the canvas so that red character is always centered
-            canvas.translate(-bias/2, mYPos-(mLayout.getHeight()/2));
+            canvas.translate(-bias/2, canvasCenterVert -(mLayout.getHeight()/2));
             mLayout.draw(canvas);
         }
     }
