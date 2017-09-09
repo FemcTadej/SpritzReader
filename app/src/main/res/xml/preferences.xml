@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="@string/preference_wpm_key"
+        android:title="@string/words_per_minute"
+        android:summary="Reading speed in words-per-minute"
+        android:defaultValue="@string/default_wpm"
+        />
+    <EditTextPreference
+        android:key="@string/preference_text_key"
+        android:title="@string/text_to_read"
+        android:summary="Text to read"
+        android:defaultValue="@string/default_text"
+        />
+</PreferenceScreen>

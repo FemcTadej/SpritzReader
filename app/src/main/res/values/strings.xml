@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Spritz Reader</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings">settings</string>
+    <string name="words_per_minute">Reading speed</string>
+    <string name="text_to_read">Input text</string>
+    <string name="default_wpm">150</string>
+    <string name="default_text">Aenean porta a velit eget lobortis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec velit eros, auctor eget ornare sed, placerat a orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum et erat sed ligula scelerisque accumsan. Vivamus vulputate nisi sit amet est molestie sodales. In accumsan ultricies lacinia. Vivamus posuere eu sapien accumsan elementum. Nullam et libero aliquet, rutrum ipsum a, gravida mi. Mauris tristique molestie lectus, et facilisis leo hendrerit in. Curabitur vel scelerisque augue, eu viverra augue. Maecenas lectus turpis, semper eu sagittis at, vestibulum non magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur eleifend est vel tristique fermentum. Ut facilisis libero vitae blandit ultricies. Aliquam eget lobortis tellus, et tempor erat. </string>
+    <string name="preference_wpm_key">preference_wpm_key</string>
+    <string name="preference_text_key">preference_text_key</string>
+</resources>
