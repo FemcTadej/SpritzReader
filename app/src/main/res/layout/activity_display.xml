@@ -58,7 +58,7 @@
     <com.hugiell.spritzreader.WordView
         android:id="@+id/wordView"
         android:layout_width="360dp"
-        android:layout_height="50dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toTopOf="@id/imageView_centerIndicator"
         app:layout_constraintLeft_toRightOf="@id/imageView_centerIndicator"
         app:layout_constraintRight_toLeftOf="@id/imageView_centerIndicator"

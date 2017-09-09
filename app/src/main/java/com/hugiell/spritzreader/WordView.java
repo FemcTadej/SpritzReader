@@ -34,7 +34,6 @@ public class WordView extends View {
         mYPos = canvas.getHeight()/2;
         Spannable wordSpannable = new SpannableString(mWord);
         if(mWord.length() > 0) {
-            canvas.drawColor(getResources().getColor(R.color.black));
             wordSpannable.setSpan(new ForegroundColorSpan(Color.RED), mCenterCharacterIndex, mCenterCharacterIndex+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             // calculate width of text before red character and after
             float leadingTextWidth = mTextPaint.measureText(mWord, 0, mCenterCharacterIndex);
@@ -43,7 +42,7 @@ public class WordView extends View {
             float bias = leadingTextWidth - trailingTextWidth;
             mLayout = new StaticLayout(wordSpannable, mTextPaint, getWidth(), Layout.Alignment.ALIGN_CENTER, 1, 0, false);
             // shift the canvas so that red character is always centered
-            canvas.translate(-bias/2, mYPos);
+            canvas.translate(-bias/2, mYPos-(mLayout.getHeight()/2));
             mLayout.draw(canvas);
         }
     }
