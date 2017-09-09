@@ -10,17 +10,21 @@ import io.reactivex.schedulers.Schedulers;
  */
 public class Reader {
     private static final Reader ourInstance = new Reader();
+    private String mText;
+    private int mWordsPerMinute;
 
-    public static Reader getInstance() {
+    public static Reader getInstance(final String text, final int wordsPerMinute) {
+        ourInstance.mText = text;
+        ourInstance.mWordsPerMinute = wordsPerMinute;
         return ourInstance;
     }
 
     private Reader() {
     }
 
-    public static Observable<String> getWordReader(final String text, final int wordsPerMinute) {
-        String[] words = text.split("[\\s']");
-        Double delay = (double)60/wordsPerMinute*1000;
+    public Observable<String> getReader() {
+        String[] words = mText.split("[\\s']");
+        Double delay = (double)60/mWordsPerMinute*1000;
         return Observable
                 .interval(delay.longValue(), TimeUnit.MILLISECONDS)
                 .subscribeOn(Schedulers.computation())
