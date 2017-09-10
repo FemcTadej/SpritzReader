@@ -12,7 +12,7 @@
         android:id="@+id/imageView_centerIndicator"
         android:layout_width="260dp"
         android:layout_height="130dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="0dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         app:layout_constraintBottom_toTopOf="parent"
@@ -22,38 +22,34 @@
         app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/ic_center_indicator" />
 
-    <ImageButton
-        android:id="@+id/imageButton_play"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:gravity="center"
         android:layout_marginTop="16dp"
-        android:background="@null"
-        android:scaleType="fitCenter"
+        android:orientation="horizontal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_centerIndicator"
-        app:srcCompat="@drawable/ic_play"
-        />
+        app:layout_constraintTop_toBottomOf="@id/imageView_centerIndicator"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
-    <ImageButton
-        android:id="@+id/imageButton_stop"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton_play"
-        app:srcCompat="@drawable/ic_cancel" />
+        <ImageButton
+            android:id="@+id/imageButton_play"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_play" />
+
+        <ImageButton
+            android:id="@+id/imageButton_stop"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_cancel" />
+    </LinearLayout>
 
     <com.hugiell.spritzreader.WordView
         android:id="@+id/wordView"
